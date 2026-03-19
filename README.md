@@ -30,7 +30,7 @@
 
 ## 🌐 Live Website
 
-> **🔗 [Visit the OpenClaw Setup Guide →](<!-- PLACEHOLDER: Replace with your live website URL -->)**
+> **🔗 [Visit the OpenClaw Setup Guide →](https://16th-psyche.github.io/Openclaw-Installation-Guide/))**
 >
 > _The full interactive setup guide is hosted at: `<!-- PLACEHOLDER: your-domain.com -->`_
 
