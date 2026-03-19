@@ -30,7 +30,7 @@
 
 ## 🌐 Live Website
 
-_The full interactive setup guide is hosted at: `https://16th-psyche.github.io/Openclaw-Installation-Guide/`_
+_The full interactive setup guide is hosted at: <a href="https://16th-psyche.github.io/Openclaw-Installation-Guide">https://16th-psyche.github.io/Openclaw-Installation-Guide</a>_
 
 ---
 
