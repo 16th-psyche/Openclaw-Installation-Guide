@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenClaw — Your AI. Your Rules.</title>
+  <meta name="description" content="The definitive editorial guide to installing and configuring OpenClaw — the self-hosted AI assistant for WhatsApp, Telegram, Discord, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Cinematic Background -->
+  <div class="bg-canvas">
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+    <div class="nebula nebula-3"></div>
+    <div class="grid-overlay"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="lobster-icon">🦞</span>
+        <span>OpenClaw</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#what-is">What is it</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#onboard">Onboard</a></li>
+        <li><a href="#channels">Channels</a></li>
+        <li><a href="#advanced">Advanced</a></li>
+      </ul>
+      <a href="#install" class="nav-cta">Get Started →</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <a href="#what-is">What is it</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#install">Install</a>
+    <a href="#onboard">Onboard</a>
+    <a href="#channels">Channels</a>
+    <a href="#advanced">Advanced</a>
+    <a href="#install">Get Started →</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="pill">Self-Hosted AI</span>
+        <span class="pill pill-alt">Privacy First</span>
+      </div>
+      <h1 class="hero-title">
+        Your AI.<br />
+        <span class="gradient-text">Your Rules.</span>
+      </h1>
+      <p class="hero-subtitle">
+        OpenClaw is a self-hosted personal AI assistant that integrates with WhatsApp, Telegram, Discord, Slack, and more — running entirely on your hardware, on your terms.
+      </p>
+      <div class="hero-actions">
+        <a href="#install" class="btn-primary">Begin Setup</a>
+        <a href="#what-is" class="btn-ghost">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Messaging Channels</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Self-Hosted</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Possibilities</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="terminal-card">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">Terminal</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-line"><span class="prompt">$</span> <span class="cmd typewriter">openclaw onboard --install-daemon</span></div>
+          <div class="terminal-output animated-line" style="--delay:1.8s">🦞 Welcome to OpenClaw</div>
+          <div class="terminal-output animated-line" style="--delay:2.4s">✓ Gateway initialized on port 18789</div>
+          <div class="terminal-output animated-line" style="--delay:3s">✓ AI provider: Anthropic (claude-opus-4.5)</div>
+          <div class="terminal-output animated-line" style="--delay:3.6s">✓ WhatsApp channel connected</div>
+          <div class="terminal-output animated-line" style="--delay:4.2s">✓ Telegram bot active</div>
+          <div class="terminal-output animated-line success" style="--delay:5s">🚀 OpenClaw is live. Your AI awaits.</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- WHAT IS OPENCLAW -->
+  <section id="what-is" class="section">
+    <div class="container">
+      <div class="section-label">The Big Picture</div>
+      <h2 class="section-title">Meet Your New Digital Companion</h2>
+      <p class="section-intro">
+        OpenClaw is a self-hosted AI gateway — a command layer that bridges you, your devices, and the most powerful language models in the world. Think of it as your private Jarvis: always on, always learning, always yours.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Omnichannel Intelligence</h3>
+          <p>Chat through WhatsApp, Telegram, Discord, Slack, Signal, iMessage, and more — all responding from one unified AI brain.</p>
+        </div>
+        <div class="feature-card feature-card--highlight">
+          <div class="feature-icon">🔒</div>
+          <h3>Privacy by Default</h3>
+          <p>Your data never touches an external server. OpenClaw runs locally — on your machine or your cloud VM — giving you full sovereignty over your conversations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Model Agnostic</h3>
+          <p>Use Claude Opus 4.5 for deep reasoning, Claude Sonnet 4.5 for everyday tasks, GPT-4 for versatility — or mix models based on context and cost.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Automation Ready</h3>
+          <p>OpenClaw can browse the web, manage files, run scripts, and orchestrate workflows — all triggered by a simple message on your phone.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔧</div>
+          <h3>Extensible with Skills</h3>
+          <p>Install community-built skills from ClawHub — from Spotify control to calendar management — transforming your assistant into a true power tool.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3>Always Available</h3>
+          <p>The gateway daemon keeps OpenClaw running 24/7, even when you close your terminal. No babysitting required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUIREMENTS -->
+  <section id="requirements" class="section section--alt">
+    <div class="container">
+      <div class="section-label">Before You Begin</div>
+      <h2 class="section-title">Prerequisites</h2>
+      <p class="section-intro">OpenClaw is designed to get out of your way. Here's what you need before the first command.</p>
+
+      <div class="req-list">
+        <div class="req-item">
+          <div class="req-number">01</div>
+          <div class="req-content">
+            <h3>A Computer — or a Cloud VM</h3>
+            <p>OpenClaw runs on macOS, Windows, and Linux. For best results and 24/7 availability, consider running it on a dedicated VM — such as Oracle Cloud's Free Tier, which works seamlessly with OpenClaw.</p>
+            <div class="req-tags">
+              <span class="tag">macOS</span>
+              <span class="tag">Windows</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Cloud VM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="req-item">
+          <div class="req-number">02</div>
+          <div class="req-content">
+            <h3>Node.js v22 or Higher</h3>
+            <p>OpenClaw is built on JavaScript, so Node.js is the engine powering it. Verify your version in a terminal:</p>
+            <div class="code-block">
+              <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="node --version">Copy</button></div>
+              <pre><code>node --version
+<span class="comment"># Should return v22.x.x or higher</span></code></pre>
+            </div>
+            <p>If you need to install or upgrade, download the LTS release from <a href="https://nodejs.org" target="_blank" class="link">nodejs.org</a>. Alternatively, install via npm directly:</p>
+            <div class="code-block">
+              <div class="code-bar"><span>npm (alternative)</span><button class="copy-btn" data-code="npm i -g openclaw">Copy</button></div>
+              <pre><code>npm i -g openclaw</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="req-item">
+          <div class="req-number">03</div>
+          <div class="req-content">
+            <h3>An AI Provider API Key</h3>
+            <p>OpenClaw is the intelligence layer — you bring the brain. Choose one (or both):</p>
+            <div class="provider-cards">
+              <div class="provider-card provider-recommended">
+                <span class="provider-badge">Recommended</span>
+                <div class="provider-name">Anthropic Claude</div>
+                <div class="provider-model">Best with: claude-opus-4.5</div>
+                <p>Claude excels at long-form reasoning, nuanced instruction-following, and maintaining context. Claude Opus 4.5 is the top recommendation for power users.</p>
+                <a href="https://console.anthropic.com" target="_blank" class="provider-link">Get API Key →</a>
+              </div>
+              <div class="provider-card">
+                <div class="provider-name">OpenAI GPT</div>
+                <div class="provider-model">Best with: gpt-4</div>
+                <p>A widely-supported option with broad ecosystem compatibility. A solid choice if you already have an existing OpenAI subscription.</p>
+                <a href="https://platform.openai.com/api-keys" target="_blank" class="provider-link">Get API Key →</a>
+              </div>
+            </div>
+            <div class="callout callout--warning">
+              <span>⚠️</span>
+              <p><strong>Keep your API key private.</strong> Never share it, commit it to public code repositories, or send it over chat. Treat it like a password.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="req-item">
+          <div class="req-number">04</div>
+          <div class="req-content">
+            <h3>About 30 Minutes</h3>
+            <p>The setup is methodical, not difficult. Follow each step in sequence and you'll have a fully operational AI assistant before your next cup of coffee.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALLATION -->
+  <section id="install" class="section">
+    <div class="container">
+      <div class="section-label">Part 1</div>
+      <h2 class="section-title">Installation</h2>
+      <p class="section-intro">One command to rule them all. The OpenClaw installer handles dependency resolution, path configuration, and initial bootstrapping automatically.</p>
+
+      <div class="install-tabs">
+        <div class="tab-buttons" id="install-tabs">
+          <button class="tab-btn active" data-tab="mac">macOS / Linux</button>
+          <button class="tab-btn" data-tab="win">Windows</button>
+          <button class="tab-btn" data-tab="npm">npm (Universal)</button>
+        </div>
+
+        <div class="tab-content active" id="tab-mac">
+          <div class="code-block code-block--large">
+            <div class="code-bar">
+              <span>bash</span>
+              <button class="copy-btn" data-code="curl -fsSL https://openclaw.ai/install.sh | bash">Copy</button>
+            </div>
+            <pre><code>curl -fsSL https://openclaw.ai/install.sh | bash</code></pre>
+          </div>
+          <div class="callout callout--info">
+            <span>ℹ️</span>
+            <p><code>curl -fsSL</code> downloads the installer script. Piping it to <code>bash</code> executes it immediately. The installer fetches the latest stable CLI, installs it globally, and prepares your environment.</p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-win">
+          <div class="code-block code-block--large">
+            <div class="code-bar">
+              <span>PowerShell (Run as Administrator)</span>
+              <button class="copy-btn" data-code="iwr -useb https://openclaw.ai/install.ps1 | iex">Copy</button>
+            </div>
+            <pre><code>iwr -useb https://openclaw.ai/install.ps1 | iex</code></pre>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-npm">
+          <div class="code-block code-block--large">
+            <div class="code-bar">
+              <span>Terminal / PowerShell</span>
+              <button class="copy-btn" data-code="npm i -g openclaw">Copy</button>
+            </div>
+            <pre><code>npm i -g openclaw</code></pre>
+          </div>
+          <div class="callout callout--info">
+            <span>ℹ️</span>
+            <p>Recommended if you already have Node.js v22+ installed. Works identically across all operating systems.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-icon">⏳</div>
+        <div class="step-content">
+          <h3>What to Expect</h3>
+          <p>The installer will download OpenClaw, resolve all dependencies, and configure your system PATH. The process takes 2–5 minutes depending on connection speed. Expect scrolling output — that's intentional.</p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-icon">✅</div>
+        <div class="step-content">
+          <h3>Verify the Installation</h3>
+          <div class="code-block">
+            <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="openclaw --version">Copy</button></div>
+            <pre><code>openclaw --version
+<span class="comment"># e.g. v2025.2.14</span></code></pre>
+          </div>
+          <p>If the version number appears, you're ready to proceed. If you see "command not found", close and reopen your terminal, then try again.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONBOARDING -->
+  <section id="onboard" class="section section--alt">
+    <div class="container">
+      <div class="section-label">Part 2</div>
+      <h2 class="section-title">Onboarding Wizard</h2>
+      <p class="section-intro">With OpenClaw installed, a single command launches the interactive setup wizard — walking you through every configuration decision from AI provider selection to channel integration.</p>
+
+      <div class="code-block">
+        <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="openclaw onboard --install-daemon">Copy</button></div>
+        <pre><code>openclaw onboard --install-daemon</code></pre>
+      </div>
+
+      <div class="callout callout--info">
+        <span>ℹ️</span>
+        <p><code>--install-daemon</code> configures OpenClaw to run as a background service. This means it stays active across terminal sessions and system restarts — no manual launching required.</p>
+      </div>
+
+      <div class="wizard-steps">
+        <div class="wizard-step">
+          <div class="wizard-step-number">1</div>
+          <div class="wizard-step-body">
+            <h3>Name Your Assistant</h3>
+            <p>Choose anything — Jarvis, Alfred, or something distinctly your own. This name personalizes your assistant's identity and how it refers to itself.</p>
+          </div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-number">2</div>
+          <div class="wizard-step-body">
+            <h3>Choose Your AI Provider</h3>
+            <p>Select between Anthropic or OpenAI using the arrow keys. Your API key will be securely stored in the local credentials store.</p>
+          </div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-number">3</div>
+          <div class="wizard-step-body">
+            <h3>Enter Your API Key</h3>
+            <p>Paste your key when prompted. The terminal will not display it as you type — that's a standard security behavior, not an error.</p>
+            <div class="mini-guide">
+              <div class="mini-guide-item">
+                <strong>Anthropic</strong>
+                <a href="https://console.anthropic.com" target="_blank" class="link">console.anthropic.com → API Keys → Create Key</a>
+              </div>
+              <div class="mini-guide-item">
+                <strong>OpenAI</strong>
+                <a href="https://platform.openai.com/api-keys" target="_blank" class="link">platform.openai.com/api-keys → Create new secret key</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-number">4</div>
+          <div class="wizard-step-body">
+            <h3>Select a Model</h3>
+            <p>The wizard will display available models. For depth and reasoning, choose <code>claude-opus-4.5</code>. For speed and economy, <code>claude-sonnet-4.5</code> is an excellent alternative.</p>
+            <div class="model-table">
+              <div class="model-row model-header">
+                <span>Model</span><span>Strength</span><span>Cost</span>
+              </div>
+              <div class="model-row recommended">
+                <span>claude-opus-4.5</span><span>Deep reasoning</span><span>Higher</span>
+              </div>
+              <div class="model-row">
+                <span>claude-sonnet-4.5</span><span>Balanced</span><span>Medium</span>
+              </div>
+              <div class="model-row">
+                <span>gpt-4</span><span>Versatile</span><span>Medium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-number">5</div>
+          <div class="wizard-step-body">
+            <h3>Configure Messaging Channels</h3>
+            <p>Choose which channels you'd like to enable. Use <kbd>Space</kbd> to toggle and <kbd>Enter</kbd> to confirm. Channels can also be added later via <code>openclaw config edit</code>.</p>
+          </div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-number">6</div>
+          <div class="wizard-step-body">
+            <h3>Install the Gateway Daemon</h3>
+            <p>Accept when prompted. The daemon registers OpenClaw as a system service, ensuring it restarts with your machine and remains accessible 24/7.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GATEWAY -->
+  <section id="gateway" class="section section--dark">
+    <div class="container">
+      <div class="section-label">Architecture</div>
+      <h2 class="section-title">The Gateway</h2>
+      <p class="section-intro">The gateway is the central nervous system of OpenClaw — the persistent process coordinating all AI requests, channel routing, and tool execution. It runs on port <code>18789</code> and exposes both a REST API and a web dashboard.</p>
+
+      <div class="gateway-grid">
+        <div class="gw-command">
+          <h4>Check Status</h4>
+          <div class="code-block">
+            <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="openclaw gateway status">Copy</button></div>
+            <pre><code>openclaw gateway status</code></pre>
+          </div>
+        </div>
+        <div class="gw-command">
+          <h4>Start Gateway</h4>
+          <div class="code-block">
+            <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="openclaw gateway start">Copy</button></div>
+            <pre><code>openclaw gateway start</code></pre>
+          </div>
+        </div>
+        <div class="gw-command">
+          <h4>Open Dashboard</h4>
+          <div class="code-block">
+            <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="openclaw dashboard">Copy</button></div>
+            <pre><code>openclaw dashboard</code></pre>
+          </div>
+        </div>
+        <div class="gw-command">
+          <h4>Restart Gateway</h4>
+          <div class="code-block">
+            <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="openclaw gateway restart">Copy</button></div>
+            <pre><code>openclaw gateway restart</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--success">
+        <span>🎯</span>
+        <p>The web dashboard is accessible at <a href="http://127.0.0.1:18789/" class="link" target="_blank">http://127.0.0.1:18789/</a> — a clean, professional interface where you can chat directly with your assistant, inspect logs, and manage settings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANNELS -->
+  <section id="channels" class="section">
+    <div class="container">
+      <div class="section-label">Part 3</div>
+      <h2 class="section-title">Messaging Channels</h2>
+      <p class="section-intro">The real power of OpenClaw is meeting you wherever you already communicate. Here's how to connect each major platform.</p>
+
+      <!-- WhatsApp -->
+      <div class="channel-block">
+        <div class="channel-header">
+          <div class="channel-icon whatsapp-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="channel-name">
+            <h3>WhatsApp</h3>
+            <span class="channel-difficulty">Medium difficulty</span>
+          </div>
+        </div>
+        <div class="channel-steps">
+          <p>WhatsApp uses QR code authentication. You'll link OpenClaw to a dedicated WhatsApp number — a separate number from your personal one is recommended.</p>
+          <div class="code-block">
+            <div class="code-bar"><span>Step 1 — Initiate login</span><button class="copy-btn" data-code="openclaw channels login whatsapp">Copy</button></div>
+            <pre><code>openclaw channels login whatsapp</code></pre>
+          </div>
+          <p>A QR code will render in your terminal. On your phone: open WhatsApp → three-dot menu → <strong>Linked Devices</strong> → <strong>Link a Device</strong> → scan the code.</p>
+          <div class="code-block">
+            <div class="code-bar"><span>Step 2 — Approve a contact number</span><button class="copy-btn" data-code="openclaw pairing approve whatsapp +15555551234">Copy</button></div>
+            <pre><code>openclaw pairing approve whatsapp +15555551234</code></pre>
+          </div>
+          <div class="callout callout--info">
+            <span>ℹ️</span>
+            <p>By default, OpenClaw only responds to approved numbers. This prevents unauthorized access to your assistant via WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Telegram -->
+      <div class="channel-block">
+        <div class="channel-header">
+          <div class="channel-icon telegram-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </div>
+          <div class="channel-name">
+            <h3>Telegram</h3>
+            <span class="channel-difficulty">Easy — Recommended first channel</span>
+          </div>
+        </div>
+        <div class="channel-steps">
+          <p>Telegram is the most straightforward integration. You'll create an official bot via Telegram's BotFather, then wire the token into OpenClaw.</p>
+          <ol class="steps-list">
+            <li>Open Telegram and search for <strong>@BotFather</strong></li>
+            <li>Send <code>/newbot</code> and follow the naming prompts</li>
+            <li>Copy the API token BotFather provides</li>
+          </ol>
+          <div class="code-block">
+            <div class="code-bar"><span>openclaw.json — channels section</span></div>
+            <pre><code>{
+  "channels": {
+    "telegram": {
+      "botToken": "<span class="highlight">your-bot-token-here</span>"
+    }
+  }
+}</code></pre>
+          </div>
+          <div class="code-block">
+            <div class="code-bar"><span>Apply changes</span><button class="copy-btn" data-code="openclaw gateway restart">Copy</button></div>
+            <pre><code>openclaw gateway restart</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Discord -->
+      <div class="channel-block">
+        <div class="channel-header">
+          <div class="channel-icon discord-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.021.013.042.031.054a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          </div>
+          <div class="channel-name">
+            <h3>Discord</h3>
+            <span class="channel-difficulty">Moderate — Requires developer portal access</span>
+          </div>
+        </div>
+        <div class="channel-steps">
+          <ol class="steps-list">
+            <li>Visit <a href="https://discord.com/developers/applications" target="_blank" class="link">discord.com/developers/applications</a> → <strong>New Application</strong></li>
+            <li>Go to <strong>Bot</strong> → <strong>Add Bot</strong> → <strong>Reset Token</strong> and copy the token</li>
+            <li>Enable: <strong>Presence Intent</strong>, <strong>Server Members Intent</strong>, <strong>Message Content Intent</strong></li>
+            <li>Go to <strong>OAuth2 → URL Generator</strong>, select <em>bot</em>, enable Send/Read Messages permissions, copy the URL to invite your bot to a server</li>
+          </ol>
+          <div class="code-block">
+            <div class="code-bar"><span>openclaw.json — channels section</span></div>
+            <pre><code>{
+  "channels": {
+    "discord": {
+      "token": "<span class="highlight">your-bot-token-here</span>"
+    }
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="other-channels">
+        <h3>More Channels</h3>
+        <div class="channel-pills">
+          <div class="channel-pill">Slack</div>
+          <div class="channel-pill">Signal</div>
+          <div class="channel-pill">Google Chat</div>
+          <div class="channel-pill">iMessage <span class="platform-tag">macOS</span></div>
+          <div class="channel-pill">Matrix</div>
+          <div class="channel-pill">And more...</div>
+        </div>
+        <p>Full setup instructions for all channels are available in the <a href="https://docs.openclaw.ai" target="_blank" class="link">official documentation</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANCED -->
+  <section id="advanced" class="section section--alt">
+    <div class="container">
+      <div class="section-label">Part 4</div>
+      <h2 class="section-title">Advanced Configuration</h2>
+
+      <div class="adv-grid">
+
+        <!-- Skills -->
+        <div class="adv-block">
+          <h3>🔧 Skills &amp; Tools</h3>
+          <p>Skills extend OpenClaw's capabilities beyond conversation. Browse the community marketplace at <a href="https://clawhub.ai" target="_blank" class="link">clawhub.ai</a> and install with a single command:</p>
+          <div class="code-block">
+            <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="openclaw skills install web-search">Copy</button></div>
+            <pre><code>openclaw skills install web-search</code></pre>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">calendar</span>
+            <span class="skill-chip">weather</span>
+            <span class="skill-chip">spotify</span>
+            <span class="skill-chip">file-organizer</span>
+            <span class="skill-chip">code-helper</span>
+            <span class="skill-chip">web-search</span>
+          </div>
+        </div>
+
+        <!-- Personality -->
+        <div class="adv-block">
+          <h3>🎭 Customizing Personality</h3>
+          <p>The <code>SOUL.md</code> file in your workspace directory defines your assistant's character, tone, and behavioral guidelines — a plain-text system prompt you fully control.</p>
+          <div class="code-block">
+            <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="nano ~/.openclaw/workspace/SOUL.md">Copy</button></div>
+            <pre><code>nano ~/.openclaw/workspace/SOUL.md</code></pre>
+          </div>
+        </div>
+
+        <!-- Multi-model -->
+        <div class="adv-block">
+          <h3>🧠 Multi-Model Routing</h3>
+          <p>Route different task types to different models — keeping costs efficient without sacrificing quality where it matters.</p>
+          <div class="code-block">
+            <div class="code-bar"><span>openclaw.json</span></div>
+            <pre><code>{
+  "models": {
+    "chat":  "claude-opus-4.5",
+    "quick": "claude-sonnet-4.5",
+    "cheap": "gpt-3.5-turbo"
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- Rate limits -->
+        <div class="adv-block">
+          <h3>💸 Cost Controls</h3>
+          <p>Protect yourself from runaway API spend with token limits and alerts:</p>
+          <div class="code-block">
+            <div class="code-bar"><span>openclaw.json</span></div>
+            <pre><code>{
+  "limits": {
+    "maxTokensPerDay": 100000,
+    "alertWhenOver":   50000
+  }
+}</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TROUBLESHOOTING -->
+  <section id="troubleshoot" class="section">
+    <div class="container">
+      <div class="section-label">Troubleshooting</div>
+      <h2 class="section-title">Common Issues</h2>
+      <div class="trouble-list">
+        <details class="trouble-item">
+          <summary>Command not found after install</summary>
+          <div class="trouble-body">
+            <p>The shell's PATH hasn't refreshed. Close your terminal, open a new session, and retry. If the issue persists, re-run the installer to ensure OpenClaw is globally linked.</p>
+          </div>
+        </details>
+        <details class="trouble-item">
+          <summary>Gateway won't start — port already in use</summary>
+          <div class="trouble-body">
+            <div class="code-block">
+              <div class="code-bar"><span>Use alternate port</span><button class="copy-btn" data-code="openclaw gateway --port 18790">Copy</button></div>
+              <pre><code>openclaw gateway --port 18790</code></pre>
+            </div>
+          </div>
+        </details>
+        <details class="trouble-item">
+          <summary>AI is not responding to messages</summary>
+          <div class="trouble-body">
+            <p>Verify your API key is valid and your provider account has remaining credits. Check the logs for detailed error output:</p>
+            <div class="code-block">
+              <div class="code-bar"><span>Terminal</span><button class="copy-btn" data-code="openclaw logs">Copy</button></div>
+              <pre><code>openclaw logs</code></pre>
+            </div>
+          </div>
+        </details>
+        <details class="trouble-item">
+          <summary>WhatsApp keeps disconnecting</summary>
+          <div class="trouble-body">
+            <p>WhatsApp's web bridge is sensitive to network interruptions. Ensure your host machine (or VM) maintains a stable internet connection. Re-scanning the QR code via <code>openclaw channels login whatsapp</code> will re-authenticate the session.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="section section--dark resources-section">
+    <div class="container">
+      <div class="section-label">Where to Go Next</div>
+      <h2 class="section-title">Resources</h2>
+      <div class="resource-grid">
+        <a href="https://docs.openclaw.ai" target="_blank" class="resource-card">
+          <div class="resource-icon">📖</div>
+          <div class="resource-name">Official Docs</div>
+          <div class="resource-url">docs.openclaw.ai</div>
+        </a>
+        <a href="https://github.com/openclaw/openclaw" target="_blank" class="resource-card">
+          <div class="resource-icon">⚙️</div>
+          <div class="resource-name">GitHub Source</div>
+          <div class="resource-url">github.com/openclaw</div>
+        </a>
+        <a href="https://clawhub.ai" target="_blank" class="resource-card">
+          <div class="resource-icon">🛒</div>
+          <div class="resource-name">ClawHub Marketplace</div>
+          <div class="resource-url">clawhub.ai</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span class="lobster-icon">🦞</span>
+        <span>OpenClaw</span>
+      </div>
+      <p class="footer-tagline">Your AI. Your Data. Your Rules.</p>
+      <p class="footer-note">This guide is an independent editorial resource. OpenClaw is open-source software — use it freely and responsibly.</p>
+      <p class="footer-note" style="margin-top: 12px;">Made by <a href="https://instagram.com/life.after.logout" target="_blank" class="link" style="border-bottom-color: rgba(183,148,244,0.4); color: var(--accent2);">@life.after.logout</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
